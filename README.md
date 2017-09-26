@@ -35,7 +35,7 @@ You can use this archive in combination with [Elton](https://github.com/globalbi
 For instance, you can print all taxonomic names without any needs for an internet connection by pointing Elton to your local archive (or cache) dir:
 
 ```sh
-java -jar elton.jar names --cache-dir=[your archive dir] --offline
+java -jar elton.jar names --cache-dir=[your archive dir]/datasets --offline
 ```
 
 
@@ -43,7 +43,7 @@ java -jar elton.jar names --cache-dir=[your archive dir] --offline
 If you'd like to write your own parsers and/or get to the raw data, you can poke around the archive directories. The directories are grouped as follows:
 
 ```
-  [some org]/[some name]/
+  datasets/[some org]/[some name]/
      access.tsv (contains where the resource were retrieved from and when)
      [resources with sha256 filenames] 
 ```
@@ -51,7 +51,7 @@ If you'd like to write your own parsers and/or get to the raw data, you can poke
 for instance, the archive directory associated with https://github.com/globalbioticinteractions/template-dataset looks like
 
 ```
-  globalbioticinteractions/template-dataset/
+  datasets/globalbioticinteractions/template-dataset/
     access.tsv
     c1b37add5ee5f30916f19811c59c2960e3b68ecf1a3846afe1776014c4c96271
     631d3777cf83e1abea848b59a6589c470cf0c7d0fd99682c4c104481ad9a543f
