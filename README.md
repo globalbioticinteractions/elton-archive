@@ -20,28 +20,24 @@ An archive of species interaction datasets produced by [Elton](https://github.co
 
 1. install [git](https://git-scm.com/)
 1. install [git-annex](https://git-annex.branchable.com)  
-1. clone [this repository](https://github.com/globalbioticinteractions/archive)
-1. get all files by running ```git annex get```. If you only want to get some of the files, you can do something like ```git annex get globalbioticinteractions/template-dataset/*```
-1. (optional) to sync git annex repo use ```git annex sync```
-1. (optional) get all files using ```git annex get```
 
 ### Building
 
 * Clone this repository
 * Get all files by running ```git annex get```
-* Stay up-to-date by syncing git annex repo use ```git annex sync``` and getting new files ```git annex get```
+* Stay up-to-date by syncing git annex repo use ```git annex sync``` and getting new files ```git annex get``` every once in a while.
 
 ## Usage
 
 ### Use With Elton
 You can use this archive in combination with [Elton](https://github.com/globalbioticinteractions/elton) if you'd like.
 
-For instance, you can print all taxonomic names from your archive using a command like
+For instance, you can print all taxonomic names without any needs for an internet connection by pointing Elton to your local archive (or cache) dir:
 
-Print usage
 ```sh
 java -jar elton.jar names --cache-dir=[your archive dir] --offline
 ```
+
 
 ### Standalone
 If you'd like to write your own parsers and/or get to the raw data, you can poke around the archive directories. The directories are grouped as follows:
@@ -65,6 +61,7 @@ for instance, the archive directory associated with https://github.com/globalbio
 According to access.tsv, 631d3777cf83e1abea848b59a6589c470cf0c7d0fd99682c4c104481ad9a543f was first retrieved from https://zenodo.org/record/207958/files/globalbioticinteractions/template-dataset-0.0.2.zip at 2017-09-18T17:59:36Z .
 
 ### Updating the Archive
+If you'd like to update the archive itself and copy/upload updated resources into the [Internet Archive](https://archive.org), you can do the following: 
 
 1. get push credentials to this repository
 1. get credentials to internet archive (or any other remote)
@@ -74,7 +71,8 @@ According to access.tsv, 631d3777cf83e1abea848b59a6589c470cf0c7d0fd99682c4c10448
 1. run an elton update (for details see https://github.com/globalbioticinteractions/elton)
 1. copy elton datasets into archives and sync using ```./update.sh [elton dataset dir] [archive repo root dir]```
 
-
+### Make your own archive
+If you'd like to keep your own copy of GloBI interaction datasets, you can take the previous section as inspiration and use your own git-annex supported archiving mechanism like: Amazon S3, a thumbdrive, webdav or any other [supported remote](https://git-annex.branchable.com/special_remotes/). 
 
 ## Contribute
 
