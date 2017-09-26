@@ -18,7 +18,7 @@ cd $2
 git annex add --exclude=*/access.tsv
 
 source $2/.archive.env
-git annex copy --to=internet-archive
+git annex copy --to=internet-archive --exclude=*/inaturalist/* --exclude=*/web-of-life/* --fast
 # add all access.tsv files
 git add **/access.tsv
 echo "git annex sync"
