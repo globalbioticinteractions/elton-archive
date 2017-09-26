@@ -15,10 +15,12 @@ usage() {
 
 cp -R $1 $2
 cd $2
+
+# add all files to annex except access logs
 git annex add --exclude=*/access.tsv
 
 source $2/.archive.env
-git annex copy --to=internet-archive --exclude=*/inaturalist/* --exclude=*/web-of-life/* --fast
-# add all access.tsv files
+git annex copy --to=internet-archive --fast --exclude=*/Dapstrom-integrated-database-and-portal-for-fish-stomach-records/* --exclude=*/inaturalist/* --exclude=*/web-of-life/*
+# add all access.tsv files to git (not git annex)
 git add **/access.tsv
 echo "git annex sync"
