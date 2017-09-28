@@ -2,7 +2,7 @@
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-An archive of species interaction datasets produced by [Elton](https://github.com/globalbioticinteractions/elton) and stored in places like the [Internet Archive](https://archive.org). 
+An archive of species interaction datasets produced by [Elton](https://github.com/globalbioticinteractions/elton) and stored in places like the [Internet Archive](https://archive.org/details/globalbioticinteractions). 
 
 <a href="http://globalbioticinteractions.org/">
   <img src="http://www.globalbioticinteractions.org/assets/globi.svg" height="120">
