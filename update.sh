@@ -20,7 +20,8 @@ cd $2
 git annex add --exclude=*/access.tsv
 
 source $2/.archive.env
-git annex copy --to=internet-archive --fast --exclude=*/Dapstrom-integrated-database-and-portal-for-fish-stomach-records/* --exclude=*/inaturalist/* --exclude=*/web-of-life/*
+#git annex copy --to=internet-archive --fast --exclude=*/Dapstrom-integrated-database-and-portal-for-fish-stomach-records/* --exclude=*/inaturalist/* --exclude=*/web-of-life/*
+git annex copy --to=internet-archive --fast 
 # add all access.tsv files to git (not git annex)
 git add **/access.tsv
 echo "git annex sync"
