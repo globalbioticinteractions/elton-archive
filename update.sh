@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # usage: ./update.sh [src] [target git annex repo]
 
